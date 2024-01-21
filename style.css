@@ -1,0 +1,325 @@
+/*
+
+.main{
+    width: 100%;
+    background: rgba(162, 229, 229, 0.262);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.heading{
+    margin-top: 60px;
+}
+
+.main .bal-exp{
+    margin-top: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.balance-expence{
+    width: 35%;
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.balance-expence h2{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.balance-expence p{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 550;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.incom-exp{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-incom-exp{
+    margin-top: 45px;
+    text-align: center;
+}
+
+.add-incom-exp h3{
+    font-size: 25px;
+    font-weight: 550;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.input-box{
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid #020410;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #020410;
+    padding-right: 28px;
+    font-weight: 520;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 550;
+    pointer-events: none;
+    transition: -5s ease;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.details{
+    width: 80%;
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.inc-exp-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.incexp-details table{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.incexp-details table tr td{
+    width: 160px;
+    border: 2px solid black;
+    color: #e4e4e4;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px;
+    background: rgba(55, 31, 31, 0.563);
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --green: #43aa8b;
+    --red: #bc4749;
+}
+
+body{
+    background-color: #edf6f9;
+    font-family: 'Andika New Basic', sans-serif;
+    color: #2f3e46;
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.header{
+    width: 100%;
+    padding: 15px;
+    background: rgba(84, 76, 76, 0.463);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .log-out-btn .btn{
+    width: 100px;
+    padding: 10px;
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.navbar .log-out-btn .btn:hover{
+    background: rgba(139, 29, 29, 0.867);
+    color: #e4e4e4;
+}
+
+.budget__numbers{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 700px;
+    margin: 1rem 0 3rem;
+    margin-top: 150px;
+}
+
+.number{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.amount__container{
+    display: flex;
+}
+
+#amount__earned,#earned__symbol{color: var(--green);}
+#amount__spent,#spent__symbol{color: var(--red);}
+
+.input__area input{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+}
+
+.input__area #description{
+    width: 330px;
+}
+
+.input__area #amount{
+    width: 70px;
+    text-align: center;
+}
+
+/* remove arrows from number input */
+.input__area input::-webkit-outer-spin-button,
+.input__area input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.buttons__area{
+    margin: 10px 0 3rem;
+}
+
+.buttons__area #add__income,
+.buttons__area #add__expense{
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+#add__income{background-color: var(--green);}
+#add__expense{background-color: var(--red);}
+
+.items__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 70%;
+    max-width: 700px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+}
+
+#income__container h2{color: var(--green);}
+#expenses__container h2{color: var(--red);}
+
+.items__container .container{
+    width: 49%;
+    border-radius: 15px;
+}
+
+.container .item{
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px 5px 30px;
+    position: relative;
+}
+
+.item__income,
+.item__expense{
+    display: flex;
+}
+
+.income span, .income p{color: var(--green);}
+.expense span, .expense p{color: var(--red);}
+
+.item .far{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--red);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.item:hover .far{
+    animation: showDelete;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showDelete{
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
