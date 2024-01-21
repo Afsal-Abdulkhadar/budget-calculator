@@ -1,5 +1,5 @@
 function logOut(){
-    window.location = "./register.html"
+    window.location = "./index.html"
 }
 
 //ITEM CONTROLLER
